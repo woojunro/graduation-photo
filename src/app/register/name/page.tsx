@@ -14,13 +14,15 @@ export default function EnterNamePage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
       <h1 className="text-2xl font-bold mb-4">이름 또는 별명을 입력해주세요</h1>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="졸업생이 알아볼 수 있으면 돼요"
-        className="border text-xl p-2 rounded w-96 mb-4"
-      />
+      <div className="w-full p-4 flex items-center justify-center">
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="졸업생이 알아볼 수 있으면 돼요"
+          className="border text-xl p-2 rounded w-96 max-w-full mb-4"
+        />
+      </div>
       <button
         disabled={!name.trim()}
         onClick={handleNext}
